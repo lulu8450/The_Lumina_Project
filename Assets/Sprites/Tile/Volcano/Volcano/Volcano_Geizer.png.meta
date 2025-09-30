@@ -106,7 +106,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -144,7 +144,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -172,10 +172,10 @@ TextureImporter:
       name: Volcano_Geizer_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 67
-        width: 10
-        height: 18
+        x: 1
+        y: 68
+        width: 8
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -194,10 +194,10 @@ TextureImporter:
       name: Volcano_Geizer_1
       rect:
         serializedVersion: 2
-        x: 0
-        y: 50
-        width: 10
-        height: 18
+        x: 10
+        y: 68
+        width: 8
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -216,10 +216,10 @@ TextureImporter:
       name: Volcano_Geizer_2
       rect:
         serializedVersion: 2
-        x: 9
-        y: 67
-        width: 10
-        height: 18
+        x: 19
+        y: 68
+        width: 8
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -238,10 +238,10 @@ TextureImporter:
       name: Volcano_Geizer_3
       rect:
         serializedVersion: 2
-        x: 9
-        y: 50
-        width: 10
-        height: 18
+        x: 28
+        y: 68
+        width: 8
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -260,10 +260,10 @@ TextureImporter:
       name: Volcano_Geizer_4
       rect:
         serializedVersion: 2
-        x: 18
-        y: 67
-        width: 10
-        height: 18
+        x: 37
+        y: 68
+        width: 8
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -282,10 +282,10 @@ TextureImporter:
       name: Volcano_Geizer_5
       rect:
         serializedVersion: 2
-        x: 18
-        y: 50
-        width: 10
-        height: 18
+        x: 46
+        y: 68
+        width: 8
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -304,10 +304,10 @@ TextureImporter:
       name: Volcano_Geizer_6
       rect:
         serializedVersion: 2
-        x: 27
-        y: 67
-        width: 10
-        height: 18
+        x: 55
+        y: 68
+        width: 8
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -326,10 +326,10 @@ TextureImporter:
       name: Volcano_Geizer_7
       rect:
         serializedVersion: 2
-        x: 27
-        y: 50
-        width: 10
-        height: 18
+        x: 64
+        y: 68
+        width: 8
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -348,10 +348,10 @@ TextureImporter:
       name: Volcano_Geizer_8
       rect:
         serializedVersion: 2
-        x: 36
-        y: 67
-        width: 10
-        height: 18
+        x: 1
+        y: 51
+        width: 8
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -370,10 +370,10 @@ TextureImporter:
       name: Volcano_Geizer_9
       rect:
         serializedVersion: 2
-        x: 36
-        y: 50
-        width: 10
-        height: 18
+        x: 10
+        y: 51
+        width: 8
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -392,10 +392,10 @@ TextureImporter:
       name: Volcano_Geizer_10
       rect:
         serializedVersion: 2
-        x: 45
-        y: 67
-        width: 10
-        height: 18
+        x: 19
+        y: 51
+        width: 8
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -414,10 +414,10 @@ TextureImporter:
       name: Volcano_Geizer_11
       rect:
         serializedVersion: 2
-        x: 45
-        y: 50
-        width: 10
-        height: 18
+        x: 28
+        y: 51
+        width: 8
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -436,10 +436,10 @@ TextureImporter:
       name: Volcano_Geizer_12
       rect:
         serializedVersion: 2
-        x: 54
-        y: 67
-        width: 10
-        height: 18
+        x: 37
+        y: 51
+        width: 8
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -458,10 +458,10 @@ TextureImporter:
       name: Volcano_Geizer_13
       rect:
         serializedVersion: 2
-        x: 54
-        y: 50
-        width: 10
-        height: 18
+        x: 46
+        y: 51
+        width: 8
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -480,10 +480,10 @@ TextureImporter:
       name: Volcano_Geizer_14
       rect:
         serializedVersion: 2
-        x: 63
-        y: 67
-        width: 10
-        height: 18
+        x: 55
+        y: 51
+        width: 8
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -502,10 +502,10 @@ TextureImporter:
       name: Volcano_Geizer_15
       rect:
         serializedVersion: 2
-        x: 63
-        y: 50
-        width: 10
-        height: 18
+        x: 64
+        y: 51
+        width: 8
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -524,10 +524,10 @@ TextureImporter:
       name: Volcano_Geizer_16
       rect:
         serializedVersion: 2
-        x: 0
-        y: 25
-        width: 18
-        height: 26
+        x: 1
+        y: 26
+        width: 16
+        height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -543,57 +543,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Volcano_Geizer_17
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 18
-        height: 26
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e02b3692c50347c30800000000000000
-      internalID: 4356159911963636238
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Volcano_Geizer_18
-      rect:
-        serializedVersion: 2
-        x: 17
-        y: 25
-        width: 18
-        height: 26
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 60436251095c8e6e0800000000000000
-      internalID: -1807978027768466426
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Volcano_Geizer_19
       rect:
         serializedVersion: 2
-        x: 17
-        y: 0
-        width: 18
-        height: 26
+        x: 18
+        y: 26
+        width: 16
+        height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -609,35 +565,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Volcano_Geizer_20
-      rect:
-        serializedVersion: 2
-        x: 34
-        y: 25
-        width: 18
-        height: 26
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3add0ed518c2e2010800000000000000
-      internalID: 1165918287672958371
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Volcano_Geizer_21
       rect:
         serializedVersion: 2
-        x: 34
-        y: 0
-        width: 18
-        height: 26
+        x: 35
+        y: 26
+        width: 16
+        height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -653,35 +587,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Volcano_Geizer_22
-      rect:
-        serializedVersion: 2
-        x: 51
-        y: 25
-        width: 18
-        height: 26
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: eb374d0cbeb0d24a0800000000000000
-      internalID: -6616619170357021762
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Volcano_Geizer_23
       rect:
         serializedVersion: 2
-        x: 51
-        y: 0
-        width: 18
-        height: 26
+        x: 52
+        y: 26
+        width: 16
+        height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -696,11 +608,99 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Volcano_Geizer_32
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3768122b7e4d6e84d8704a5d4e4df57e
+      internalID: -825185219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Volcano_Geizer_34
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 1
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dadd655554c0d574eb196a9c4e110df3
+      internalID: 2019197790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Volcano_Geizer_36
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 1
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35950b62a8ef5c14d9d2ffd719008110
+      internalID: -1435797851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Volcano_Geizer_39
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 1
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f0d88706a5912e4db8f76e604484841
+      internalID: 918340493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 042453f290049d04ab983ba38b7678ec
     internalID: 0
     vertices: []
     indices: 
@@ -709,7 +709,47 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Volcano_Geizer_0: 2889183399485920842
+      Volcano_Geizer_1: -5448794102541048412
+      Volcano_Geizer_10: -263863060321723214
+      Volcano_Geizer_11: -6594025933581815368
+      Volcano_Geizer_12: -8500890826007604492
+      Volcano_Geizer_13: -84267123539677865
+      Volcano_Geizer_14: -2724416971970883930
+      Volcano_Geizer_15: -8309656175751918310
+      Volcano_Geizer_16: 8921967150837083110
+      Volcano_Geizer_17: 4356159911963636238
+      Volcano_Geizer_18: -1807978027768466426
+      Volcano_Geizer_19: 2853383427034121825
+      Volcano_Geizer_2: -8845071749657950161
+      Volcano_Geizer_20: 1165918287672958371
+      Volcano_Geizer_21: 354756363857664187
+      Volcano_Geizer_22: -6616619170357021762
+      Volcano_Geizer_23: 9108243622494279883
+      Volcano_Geizer_24: 12191029
+      Volcano_Geizer_25: 1064521154
+      Volcano_Geizer_26: 1459883063
+      Volcano_Geizer_27: 1219270244
+      Volcano_Geizer_28: 968093311
+      Volcano_Geizer_29: 1251796081
+      Volcano_Geizer_3: -4570151686029639122
+      Volcano_Geizer_30: 231886236
+      Volcano_Geizer_31: -731908843
+      Volcano_Geizer_32: -825185219
+      Volcano_Geizer_33: 1721254878
+      Volcano_Geizer_34: 2019197790
+      Volcano_Geizer_35: -916111251
+      Volcano_Geizer_36: -1435797851
+      Volcano_Geizer_37: 1630916006
+      Volcano_Geizer_38: -1638953098
+      Volcano_Geizer_39: 918340493
+      Volcano_Geizer_4: -7600943450566959887
+      Volcano_Geizer_5: 4620807886236107998
+      Volcano_Geizer_6: 4116947571824485201
+      Volcano_Geizer_7: -8012423121349474761
+      Volcano_Geizer_8: -57297872960456150
+      Volcano_Geizer_9: 6544755980149108853
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
