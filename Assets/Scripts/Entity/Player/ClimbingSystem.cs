@@ -28,7 +28,7 @@ public class ClimbingSystem : LocomotionSystem
             
             // Apply climbing movement. Now includes horizontal input.
             // Note: We use climbSpeed for both axes to keep movement consistent.
-            rb.velocity = new Vector2(horizontalInput * climbSpeed, verticalInput * climbSpeed);
+            rb.linearVelocity = new Vector2(horizontalInput * climbSpeed, verticalInput * climbSpeed);
         }
     }
 
@@ -54,7 +54,7 @@ public class ClimbingSystem : LocomotionSystem
         {
             isClimbing = true;
             rb.gravityScale = 0f; // Disable gravity while climbing
-            rb.velocity = Vector2.zero; // Stop all momentum
+            rb.linearVelocity = Vector2.zero; // Stop all momentum
         }
     }
     
@@ -72,7 +72,7 @@ public class ClimbingSystem : LocomotionSystem
             // If the player lets go of vertical and horizontal input, they should stay attached but stop moving
             else if (isClimbing && playerMove.moveInput.y == 0 && playerMove.moveInput.x == 0)
             {
-                rb.velocity = new Vector2(0f, 0f);
+                rb.linearVelocity = new Vector2(0f, 0f);
             }
         }
     }
@@ -103,7 +103,7 @@ public class ClimbingSystem : LocomotionSystem
         {
              isClimbing = true;
              rb.gravityScale = 0f;
-             rb.velocity = Vector2.zero;
+             rb.linearVelocity = Vector2.zero;
         }
     }
 
@@ -119,7 +119,7 @@ public class ClimbingSystem : LocomotionSystem
         if (rb != null)
         {
             rb.gravityScale = 1f;
-            rb.velocity = new Vector2(rb.velocity.x, 0f);
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0f);
         }
         isClimbing = false;
     }

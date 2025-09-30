@@ -34,7 +34,7 @@ public class JumpSystem : LocomotionSystem
         // Immediately zero out horizontal velocity to prevent sliding
         if (rb != null)
         {
-            rb.velocity = new Vector2(0f, rb.velocity.y);
+            rb.linearVelocity = new Vector2(0f, rb.linearVelocity.y);
         }
     }
 }

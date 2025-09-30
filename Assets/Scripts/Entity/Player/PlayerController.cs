@@ -7,6 +7,8 @@ public class PlayerController : MonoBehaviour
     public PlayerMove playerMove;
     public PlayerJump playerJump;
     public PlayerShoot playerShoot;
+    public GameObject leftFirePoint;
+    public GameObject rightFirePoint;
     
     [Header("Locomotion Systems")]
     public LocomotionSystem jumpSystem; 
@@ -29,6 +31,10 @@ public class PlayerController : MonoBehaviour
         // Initialize health
         currentHealth = maxHealth;
 
+        // Initialize Fire Point
+        leftFirePoint = GameObject.Find("LeftFirePoint");
+        rightFirePoint = GameObject.Find("RightFirePoint");
+
         // Initialize the input system
         inputActions = new PlayerControls();
         inputActions.Enable();
@@ -38,12 +44,13 @@ public class PlayerController : MonoBehaviour
         playerJump = GetComponent<PlayerJump>();
         playerShoot = GetComponent<PlayerShoot>();
 
+        playerShoot.firePoint = rightFirePoint.transform;
+
         // --- LOCMOTION SYSTEM SETUP ---
         // Get the Locomotion System references (must be on the same GameObject)
         jumpSystem = GetComponent<JumpSystem>();
         climbingSystem = GetComponent<ClimbingSystem>();
-        // Add others here as you create them:
-        // jetpackSystem = GetComponent<JetpackSystem>();
+        jetpackSystem = GetComponent<JetpackSystem>();
         // grapplingSystem = GetComponent<GrapplingSystem>();
 
         // Store all available systems in an array for sequential switching

@@ -105,8 +105,9 @@ public class Gunner : Enemy
         }
         else
         {
-            // Player is not detected: Patrol.
+            // Player is not detected: Patrol and heal.
             Patrol();
+            base.FullHeal();
         }
     }
 
@@ -118,6 +119,7 @@ public class Gunner : Enemy
         if (patrolSystem != null)
         {
             patrolSystem.enabled = true;
+            rangeAttackSystem.canRotate = false;
         }
     }
 
@@ -129,6 +131,7 @@ public class Gunner : Enemy
         // Execute the attack logic defined in the component.
         if (rangeAttackSystem != null)
         {
+            rangeAttackSystem.canRotate = true;
             rangeAttackSystem.Attack();
         }
     }
@@ -144,7 +147,7 @@ public class Gunner : Enemy
         // Ensure Rigidbody velocity is zeroed out to prevent sliding (if using physics).
         if (rb != null)
         {
-             rb.velocity = Vector2.zero;
+             rb.linearVelocity = Vector2.zero;
         }
     }
 

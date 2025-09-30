@@ -50,13 +50,13 @@ public class PlayerJump : MonoBehaviour
             {
                 // Wall Jump from the left side (jump to the right)
                 // We clear the current velocity and apply the new one for a snappy jump
-                rb.velocity = new Vector2(wallJumpForce, jumpForce);
+                rb.linearVelocity = new Vector2(wallJumpForce, jumpForce*2);
             }
             else if (isTouchingRightWall)
             {
                 // Wall Jump from the right side (jump to the left)
                 // We clear the current velocity and apply the new one for a snappy jump
-                rb.velocity = new Vector2(-wallJumpForce, jumpForce);
+                rb.linearVelocity = new Vector2(-wallJumpForce, jumpForce*2);
             }
         }
     }

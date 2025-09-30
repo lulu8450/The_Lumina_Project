@@ -6,7 +6,7 @@ public class Projectile : MonoBehaviour
     // The amount of time (in seconds) before the projectile destroys itself.
     public float lifeTime = 3f; 
     public int damageToDeal = 10; // Damage the projectile will deal
-
+    
     void Start()
     {
         // Start the self-destruct countdown immediately.

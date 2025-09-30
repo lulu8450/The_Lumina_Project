@@ -80,7 +80,7 @@ public class JetpackSystem : LocomotionSystem
     {
         // 1. Horizontal Movement (always active in Jetpack mode)
         // We set velocity directly for responsive movement.
-        rb.velocity = new Vector2(horizontalInput * jetpackHorizontalSpeed, rb.velocity.y);
+        rb.linearVelocity = new Vector2(horizontalInput * jetpackHorizontalSpeed, rb.linearVelocity.y);
 
 
         // 2. Vertical Thrusting (using the Jump key)
@@ -120,7 +120,7 @@ public class JetpackSystem : LocomotionSystem
         isThrusting = false;
         if (rb != null)
         {
-            rb.velocity = new Vector2(0f, 0f); // Start with no momentum
+            rb.linearVelocity = new Vector2(0f, 0f); // Start with no momentum
             rb.gravityScale = 1f; // Start with gravity on, let FixedUpdate manage it
         }
     }

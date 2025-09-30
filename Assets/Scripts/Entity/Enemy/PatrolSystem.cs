@@ -27,7 +27,7 @@ public class PatrolSystem : MonoBehaviour
 {
     public Transform[] patrolPoints;
     public float moveSpeed = 2f;
-    private int currentPointIndex;
+    public int currentPointIndex;
 
     private void Start()
     {

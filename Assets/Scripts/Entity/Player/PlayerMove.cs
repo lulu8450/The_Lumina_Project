@@ -43,19 +43,19 @@ public class PlayerMove : MonoBehaviour
 
             if (!movingIntoWall)
         {
-            rb.velocity = new Vector2(moveInput.x * moveSpeed, rb.velocity.y);
+            rb.linearVelocity = new Vector2(moveInput.x * moveSpeed, rb.linearVelocity.y);
         }
         else
         {
                 // If moving into a wall, allow sliding down, but stop horizontal movement
-                rb.velocity = new Vector2(0, rb.velocity.y);
+                rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
             }
         }
         else if (playerJump.IsTouchingFloor())
         {
             // If the player releases the key while grounded, stop horizontal movement completely.
             // This is the critical fix for the "stuck" issue when on the ground.
-            rb.velocity = new Vector2(0, rb.velocity.y);
+            rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
         }
     }
 }
