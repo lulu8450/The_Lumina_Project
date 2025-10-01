@@ -8,17 +8,17 @@ public class Swordsman : Enemy
     public ChaseSystem chaseSystem;
     public PatrolSystem patrolSystem;
     public MeleeAttackSystem meleeAttackSystem;
-    // public GameObject meleeZone;
 
     [Header("Swordsman Settings")]
     public float stoppingDistance = 1.5f; // How close the Swordsman gets before stopping to attack
+    public float stoppingChaseDist = 4f; // How Far the Swordsman gets before stop chasing
     
     private Rigidbody2D rb;
+    private Vector2 chaseAnchorPosition;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        // meleeZone = GameObject.Find("MeleeAttack")
 
         // Get the attached AI components
         rangeDetection = GetComponentInChildren<RangeDetection>();
@@ -33,9 +33,23 @@ public class Swordsman : Enemy
         }
     }
 
+    private void Start()
+    {
+        // Start patrolling immediately to ensure movement begins on spawn.
+        Patrol();
+    }
+
     private void Update()
     {
         if (target == null) return;
+        
+        // If the enemy is too far from its anchor, it stops chasing and returns to Patrol.
+        float distanceToAnchor = Vector2.Distance(transform.position, chaseAnchorPosition);
+        if (distanceToAnchor > stoppingChaseDist)
+        {
+            // Set the detection to false, so the logic falls back to the Patrol state
+            rangeDetection.isTargetDetected = false;
+        }
 
         if (rangeDetection.isTargetDetected)
         {
@@ -44,8 +58,8 @@ public class Swordsman : Enemy
             // 1. Attack Condition
             if (distanceToTarget <= meleeAttackSystem.attackRange)
             {
-                Attack();
                 StopMovement();
+                Attack();
             }
             // 2. Chase Condition (Move within a set range)
             else if (distanceToTarget > stoppingDistance)
@@ -62,8 +76,6 @@ public class Swordsman : Enemy
         {
             // Player is not detected: Patrol and heal
             Patrol();
-            base.FullHeal();
-
         }
     }
 
@@ -72,18 +84,21 @@ public class Swordsman : Enemy
         // Stop all components that handle movement
         if (patrolSystem != null) patrolSystem.enabled = false;
         if (chaseSystem != null) chaseSystem.enabled = false;
-        if (rb != null) rb.linearVelocity = new Vector2(0f, rb.linearVelocity.y);
+        if (rb != null) rb.linearVelocity = Vector2.zero; // Use velocity to stop movement instantly.
     }
 
     private void Patrol()
     {
-        // Swordsman continues patrolling until the player is spotted.
-        // StopMovement(); // Ensure other movement systems are off
+        // Ensure other movement systems are off
+        if (chaseSystem != null) chaseSystem.enabled = false;
         if (patrolSystem != null) patrolSystem.enabled = true;
     }
 
     private void Chase()
     {
+        // This is where the leash anchor is set when the chase begins.
+        chaseAnchorPosition = transform.position;
+
         // Enable Chase and disable Patrol while pursuing the player.
         if (patrolSystem != null) patrolSystem.enabled = false;
         if (chaseSystem != null) chaseSystem.enabled = true;
@@ -95,7 +110,6 @@ public class Swordsman : Enemy
         if (meleeAttackSystem != null)
         {
             meleeAttackSystem.Attack();
-            // meleeZone.SetActive(true);
         }
     }
 
