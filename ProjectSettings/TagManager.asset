@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Enemy
   - PauseMenu
+  - PauseCanvas
   layers:
   - Default
   - TransparentFX

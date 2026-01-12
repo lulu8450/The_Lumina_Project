@@ -25,6 +25,9 @@ public class PlayerController : MonoBehaviour
     private PlayerControls inputActions;
     private LocomotionSystem[] locomotionSystems;
     private int currentSystemIndex = 0;
+    
+    // NEW: Reference to the GameManager singleton
+    private GameManager gameManager;
 
     void Awake()
     {
@@ -45,8 +48,11 @@ public class PlayerController : MonoBehaviour
         playerShoot = GetComponent<PlayerShoot>();
 
         playerShoot.firePoint = rightFirePoint.transform;
+        
+        // Get the GameManager singleton instance
+        gameManager = GameManager.Instance;
 
-        // --- LOCMOTION SYSTEM SETUP ---
+        // --- LOCOMOTION SYSTEM SETUP ---
         // Get the Locomotion System references (must be on the same GameObject)
         jumpSystem = GetComponent<JumpSystem>();
         climbingSystem = GetComponent<ClimbingSystem>();
@@ -73,8 +79,9 @@ public class PlayerController : MonoBehaviour
         // --- INPUT BINDINGS ---
         inputActions.Player.Jump.performed += OnJump;
         inputActions.Player.Shoot.performed += OnShoot;
-        inputActions.Player.SwitchLeft.performed += OnSwitchLeft; // Bind new actions
-        inputActions.Player.SwitchRight.performed += OnSwitchRight; // Bind new actions
+        inputActions.Player.Pause.performed += OnPause;
+        inputActions.Player.SwitchLeft.performed += OnSwitchLeft;
+        inputActions.Player.SwitchRight.performed += OnSwitchRight;
     }
 
     void OnEnable()
@@ -111,6 +118,25 @@ public class PlayerController : MonoBehaviour
 
     // --- ACTION HANDLERS ---
 
+    public void OnPause(InputAction.CallbackContext context)
+    {
+        // FIX: Now references the GameManager singleton and toggles the pause state.
+        if (context.performed)
+        {
+            if (gameManager != null)
+            {
+                if (gameManager.isGamePaused)
+                {
+                    gameManager.ResumeGame();
+                }
+                else
+                {
+                    gameManager.PauseGame();
+                }
+            }
+        }
+    }
+
     public void OnJump(InputAction.CallbackContext context)
     {
         // Only the currently active LocomotionSystem handles the Jump action
@@ -118,12 +144,9 @@ public class PlayerController : MonoBehaviour
         {
             // If the current system is JumpSystem, call the physical jump method
             if (currentLocomotionSystem == jumpSystem && canJump)
-        {
-            playerJump.Jump();
+            {
+                playerJump.Jump();
             }
-            // Other systems (like Climbing) might use this button for a different action (e.g., detaching or a burst of speed)
-            // You would add that logic here:
-            // else if (currentLocomotionSystem == climbingSystem) { /* climbingSystem.JumpOff() */ } 
         }
     }
 
@@ -143,7 +166,9 @@ public class PlayerController : MonoBehaviour
         currentHealth -= damage;
         if (currentHealth <= 0)
         {
-            Die();
+            // Die();
+            // gameObject.SetActive(false);
+            return;
         }
     }
 
@@ -161,10 +186,6 @@ public class PlayerController : MonoBehaviour
         {
             currentLocomotionSystem.Deactivate();
         }
-        
-        // Enable/Disable the passive movement scripts based on the active system
-        // The JumpSystem handles enabling/disabling PlayerMove/PlayerJump itself,
-        // but if another system needed immediate component changes, you'd put them here.
         
         currentLocomotionSystem = newSystem;
         currentLocomotionSystem.Activate();

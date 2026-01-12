@@ -150,6 +150,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 0.2
       objectReference: {fileID: 0}
+    - target: {fileID: 4673011023110882299, guid: a750861ca74739d4f8ad6cd80260e035, type: 3}
+      propertyPath: m_Mass
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 4718684117042902812, guid: a750861ca74739d4f8ad6cd80260e035, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -244,6 +248,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 0
+  maxHealth: 0
   damageAmount: 0
   target: {fileID: 0}
   rangeDetection: {fileID: 8518280881377179883}
